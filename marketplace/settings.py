@@ -31,17 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'item.apps.ItemConfig',
+    'shop.apps.ShopConfig',
+    'users.apps.UsersConfig',
+    'cart.apps.CartConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'item.apps.ItemConfig',
-    'shop.apps.ShopConfig',
-    'users.apps.UsersConfig',
-    'cart.apps.CartConfig',
-    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,4 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL= 'home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
