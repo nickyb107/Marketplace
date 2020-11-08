@@ -5,13 +5,20 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+
+  <div class="jumbotron">
+    <h1 class"display-4">nick's marketplace</h1>
+    <p class"lead">
+      <a class="btn btn-primary btn-lg" href="{% url 'list_view' %}" role="button">Go to the shop</a>
+    </p>
+  </div>
   hi {{ user.username }}
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p> you are not logged in </p>
-  <a href="{% url 'login' %}">login</a>
-  <a href="{% url 'signup' %}">sign up </a>
-{% endif %}
+  <a href="{% url 'login' %}">Login</a>
+  <a href="{% url 'signup' %}">Sign up </a>
 
+{% endif %}
 
 {% endblock content %}

@@ -2,6 +2,9 @@
 
 {% block content %}
 <div class="post-entry">
-  <h2>{{ item.title }}</h2>
-  <p>{{ item.body }}</p>
+  <h2>{{ item.item_name}}</h2>
+  <p>{{ item.description }}</p>
+  {{item.price}}
 </div>
+<a class="btn btn-primary " href="{% url 'cart_list' %}" role="button">add to cart</a>
+{% endblock content %}

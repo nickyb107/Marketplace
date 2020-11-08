@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+{% for item in item_list %}
+
+  <div class="card">
+    <div class="card-header">
+      <a href="{% url 'detail_view' item.pk %}">{{ item.item_name }}</a>
+    </div>
+    <div class="card-body">
+      {{ item.description }}
+
+    </div>
+
+  </div>
+  <br>
+
+{% endfor %}
+{% endblock content %}
