@@ -4,12 +4,13 @@
 
 
 {% block content %}
-
-{% for item in item_list %}
+<h1>Cart</h1>
+{% for item in cart_list %}
 
   <div class="card">
     <div class="card-header">
-      <a href="{% url 'detail_view' item.pk %}">{{ item.item_name }}</a>{{item.price}}
+      <a href="{% url 'detail_view' item.pk %}"><h2>{{ item.item_name }}</h2></a>
+      {{item.price}}
     </div>
   </div>
   <br>

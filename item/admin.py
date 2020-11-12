@@ -1,5 +1,15 @@
 from django.contrib import admin
-#from django.contrib.auth.admin import UserAdmin
 
-from .models import item
+from .models import item, Review
+
+class CommentInLine(admin.TabularInline):
+    model = Review
+
+class ItemAdmin(admin.ModelAdmin):
+    inlines = [
+        CommentInLine
+    ]
+
+
 admin.site.register(item)
+admin.site.register(Review)
