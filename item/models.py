@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 class item(models.Model):
     item_name = models.CharField(max_length = 100)
     description = models.TextField(max_length = 500)
+    in_cart = models.BooleanField(default = False)
     price = models.CharField(max_length = 5)
     def __str__(self):
         return self.item_name

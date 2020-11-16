@@ -3,6 +3,7 @@
 
 {% block content %}
 <h1>new review</h1>
+{{review.body}}
 <form action="" method="post">
   {% csrf_token %}
   {{for.as_p}}

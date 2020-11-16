@@ -6,7 +6,7 @@
   <p>{{ item.description }}</p>
   {{item.price}}
 </div>
-<a class="btn btn-primary " href="{% url 'cart_view' %}" role="button">add to cart</a>
+<a class="btn btn-primary " href="{% url 'cart_view'  %}" role="button">add to cart</a>
 <a class="btn btn-primary " href="{% url 'review_view' %}" role="button">write a review</a>
 <h2>Reviews</h2>
 {% for i in item.reviews.all %}
